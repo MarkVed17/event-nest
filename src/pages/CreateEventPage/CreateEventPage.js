@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import moment from "moment";
 import { useEventInfo } from "../../contexts";
 import "./CreateEventPage.css";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +13,7 @@ const CreateEventPage = () => {
     url: "",
     description: "",
   });
-  const { eventInfo, setEventInfo } = useEventInfo();
+  const { setEventInfo } = useEventInfo();
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -20,84 +21,95 @@ const CreateEventPage = () => {
     navigate("/event");
   };
 
-  console.log(eventInfo);
-
   const navigate = useNavigate();
 
   return (
     <div className="main-content">
-      <form onSubmit={(e) => submitHandler(e)}>
+      <h1>Create your event</h1>
+      <form onSubmit={(e) => submitHandler(e)} className="form-container">
         <div className="form-elements">
-          <label htmlFor="event-name">My event is called</label>
+          <label htmlFor="event-name">🎉 My event is called</label>
           <input
             type="text"
             onChange={(e) =>
               setEventDetails({ ...eventDetails, name: e.target.value })
             }
+            className="event-input-box"
             required
           />
         </div>
 
         <div className="form-elements">
-          <label htmlFor="event-start-time">It starts at</label>
+          <label htmlFor="event-start-time">🗓 It starts at</label>
           <input
             type="datetime-local"
             onChange={(e) =>
-              setEventDetails({ ...eventDetails, start: e.target.value })
+              setEventDetails({
+                ...eventDetails,
+                start: moment(e.target.value),
+              })
             }
+            className="event-input-box"
             required
           />
         </div>
 
         <div className="form-elements">
           <label htmlFor="event-end-time">
-            It ends at <span>(optional)</span>
+            🏁 It ends at <span className="optional-label">(optional)</span>
           </label>
           <input
             type="datetime-local"
             onChange={(e) =>
-              setEventDetails({ ...eventDetails, end: e.target.value })
+              setEventDetails({ ...eventDetails, end: moment(e.target.value) })
             }
+            className="event-input-box"
           />
         </div>
 
         <div className="form-elements">
           <label htmlFor="event-location">
-            It's happening at <span>Optional</span>
+            📍 It's happening at{" "}
+            <span className="optional-label">(optional)</span>
           </label>
           <input
             type="text"
             onChange={(e) =>
               setEventDetails({ ...eventDetails, location: e.target.value })
             }
+            className="event-input-box"
           />
         </div>
 
         <div className="form-elements">
           <label htmlFor="event-link">
-            Add a URL link <span>Optional</span>
+            🔗 Add a URL link <span className="optional-label">(optional)</span>
           </label>
           <input
             type="url"
             onChange={(e) =>
               setEventDetails({ ...eventDetails, url: e.target.value })
             }
+            className="event-input-box"
           />
         </div>
 
         <div className="form-elements">
           <label htmlFor="event-details">
-            Description <span>Optional</span>
+            ✏️ Description <span className="optional-label">(optional)</span>
           </label>
           <input
             type="text"
             onChange={(e) =>
               setEventDetails({ ...eventDetails, description: e.target.value })
             }
+            className="event-input-box"
           />
         </div>
 
-        <button type="submit">Next</button>
+        <button type="submit" className="next-btn">
+          Next
+        </button>
       </form>
     </div>
   );

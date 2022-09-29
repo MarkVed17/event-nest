@@ -1,4 +1,37 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .form-elements {
   display: flex;
   flex-direction: column;
+  gap: 8px;
+}
+
+.event-input-box {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--input-bg);
+}
+
+.optional-label {
+  color: var(--medium-grey);
+}
+
+.next-btn {
+  padding: 16px;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 18px;
+  color: var(--white);
+  background: linear-gradient(90deg, #8456ec 3.25%, #e87bf8 100%);
+  border: none;
+  border-radius: 10px;
+}
+
+input:focus{
+  outline: none;
 }

@@ -1,0 +1,44 @@
+.event-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-name {
+  font-weight: 700;
+  color: var(--primary-text-purple-dark);
+}
+
+.event-secondary-text {
+  color: var(--dark-grey);
+}
+
+.event-specifics {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-date > span {
+  font-weight: 400;
+}
+
+.start-date {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-text-purple-dark);
+}
+
+.end-date {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-grey);
+}
+
+.arrow-icon {
+  margin-left: auto;
+}

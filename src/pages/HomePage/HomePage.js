@@ -7,14 +7,19 @@ const HomePage = () => {
 
   return (
     <div className="main-content">
-      <h1>
-        Imagine if <span>Snapchat</span> had events.
-      </h1>
-      <p>
-        Easily host and share events with your friends across any social media.
-      </p>
-      <img src="/assets/hero.svg" alt="hero" />
-      <button onClick={() => navigate("/create")}>Create my event</button>
+      <div className="heading-wrapper">
+        <h1 className="heading__title">
+          Imagine if <span className="heading__title-highlight">Snapchat</span> had events.
+        </h1>
+        <p className="heading__subtitle">
+          Easily host and share events with your friends across any social
+          media.
+        </p>
+      </div>
+      <img src="/assets/hero.svg" alt="hero" className="hero-img" />
+      <button onClick={() => navigate("/create")} className="create-btn">
+        <span>🎉</span> <span>Create my event</span>
+      </button>
     </div>
   );
 };
