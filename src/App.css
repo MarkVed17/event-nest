@@ -1,3 +1,8 @@
+h1,
+h3, p {
+  margin: 0;
+}
+
 :root {
   /* Primary Colors for buttons, text, gardients */
   --primary-text-purple-dark: #240d57;
@@ -21,6 +26,6 @@
   --medium-grey: #828282;
   --base-grey: #bdbdbd;
   --light-grey: #e0e0e0;
-  --ghost: #f2f2f2;
+  --input-bg: #f2f2f2;
   --white: #fbfaff;
 }
