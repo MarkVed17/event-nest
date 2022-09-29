@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
-}
+:root {
+  /* Primary Colors for buttons, text, gardients */
+  --primary-text-purple-dark: #240d57;
+  --primary-text-purple-light: #501fc1;
+  --envited-purple: #8456ec;
+  --envited-pink: #e87bf8;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  /* Secondary Colors */
+  --secondary-purple-1: #ccb6ff;
+  --secondary-purple-2: #ede5ff;
+  --secondary-purple-3: #f6f2ff;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  /* Alert Colors */
+  --secondary-bg-red: #ffd7e0;
+  --secondary-fg-red: #e61445;
+  --secondary-bg-green: #d3ffe2;
+  --secondary-fg-green: #00805e;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  /* Neutral Colors for general text & background */
+  --dark-grey: #4f4f4f;
+  --medium-grey: #828282;
+  --base-grey: #bdbdbd;
+  --light-grey: #e0e0e0;
+  --ghost: #f2f2f2;
+  --white: #fbfaff;
 }
