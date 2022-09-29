@@ -28,7 +28,12 @@ const CreateEventPage = () => {
       <h1>Create your event</h1>
       <form onSubmit={(e) => submitHandler(e)} className="form-container">
         <div className="form-elements">
-          <label htmlFor="event-name">🎉 My event is called</label>
+          <label htmlFor="event-name">
+            <span role="img" aria-label="celebrate">
+              🎉
+            </span>
+            My event is called
+          </label>
           <input
             type="text"
             onChange={(e) =>
@@ -40,7 +45,12 @@ const CreateEventPage = () => {
         </div>
 
         <div className="form-elements">
-          <label htmlFor="event-start-time">🗓 It starts at</label>
+          <label htmlFor="event-start-time">
+            <span role="img" aria-label="calendar">
+              🗓
+            </span>
+            It starts at
+          </label>
           <input
             type="datetime-local"
             onChange={(e) =>
@@ -56,7 +66,10 @@ const CreateEventPage = () => {
 
         <div className="form-elements">
           <label htmlFor="event-end-time">
-            🏁 It ends at <span className="optional-label">(optional)</span>
+            <span role="img" aria-label="flag">
+              🏁
+            </span>
+            It ends at <span className="optional-label">(optional)</span>
           </label>
           <input
             type="datetime-local"
@@ -69,8 +82,10 @@ const CreateEventPage = () => {
 
         <div className="form-elements">
           <label htmlFor="event-location">
-            📍 It's happening at{" "}
-            <span className="optional-label">(optional)</span>
+            <span role="img" aria-label="pin">
+              📍
+            </span>
+            It's happening at <span className="optional-label">(optional)</span>
           </label>
           <input
             type="text"
@@ -83,7 +98,10 @@ const CreateEventPage = () => {
 
         <div className="form-elements">
           <label htmlFor="event-link">
-            🔗 Add a URL link <span className="optional-label">(optional)</span>
+            <span role="img" aria-label="url">
+              🔗
+            </span>{" "}
+            Add a URL link <span className="optional-label">(optional)</span>
           </label>
           <input
             type="url"
@@ -96,7 +114,10 @@ const CreateEventPage = () => {
 
         <div className="form-elements">
           <label htmlFor="event-details">
-            ✏️ Description <span className="optional-label">(optional)</span>
+            <span role="img" aria-label="pencil">
+              ✏️
+            </span>{" "}
+            Description <span className="optional-label">(optional)</span>
           </label>
           <input
             type="text"

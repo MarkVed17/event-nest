@@ -18,7 +18,7 @@ const HomePage = () => {
       </div>
       <img src="/assets/hero.svg" alt="hero" className="hero-img" />
       <button onClick={() => navigate("/create")} className="create-btn">
-        <span>🎉</span> <span>Create my event</span>
+        <span role="img" aria-label="celebrate">🎉</span> <span>Create my event</span>
       </button>
     </div>
   );
