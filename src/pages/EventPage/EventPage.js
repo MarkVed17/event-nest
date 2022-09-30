@@ -15,30 +15,32 @@ const EventPage = () => {
           <h3 className="event-secondary-text">Hosted by Guest</h3>
         </div>
 
-        <div className="event-specifics">
-          <img src="/assets/calendar.svg" alt="calendar" />
-          <div className="event-date">
-            <p className="start-date">{start.format("Do MMMM YYYY hh:mm A")}</p>
-            {end && (
-              <p className="end-date">
-                <span>to </span>
-                {end.format("Do MMMM YYYY hh:mm A")}
-              </p>
-            )}
-          </div>
-          <img src="/assets/arrow.svg" alt="arrow" className="arrow-icon" />
-        </div>
-
-        {location && (
+        <div className="event-main">
           <div className="event-specifics">
-            <img src="/assets/location.svg" alt="location" />
-            <p className="event-date">{location}</p>
+            <img src="/assets/calendar.svg" alt="calendar" />
+            <div className="event-date">
+              <p className="start-date">
+                {start.format("Do MMMM YYYY hh:mm A")}
+              </p>
+              {end && (
+                <p className="end-date">
+                  <span>to </span>
+                  {end.format("Do MMMM YYYY hh:mm A")}
+                </p>
+              )}
+            </div>
             <img src="/assets/arrow.svg" alt="arrow" className="arrow-icon" />
           </div>
-        )}
-
-        {url && <p>{url}</p>}
-        {description && <p>{description}</p>}
+          {location && (
+            <div className="event-specifics">
+              <img src="/assets/location.svg" alt="location" />
+              <p className="event-date">{location}</p>
+              <img src="/assets/arrow.svg" alt="arrow" className="arrow-icon" />
+            </div>
+          )}
+          {url && <p>{url}</p>}
+          {description && <p>{description}</p>}
+        </div>
       </div>
     </div>
   );

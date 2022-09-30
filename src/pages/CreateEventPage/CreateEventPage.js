@@ -100,7 +100,7 @@ const CreateEventPage = () => {
           <label htmlFor="event-link">
             <span role="img" aria-label="url">
               🔗
-            </span>{" "}
+            </span>
             Add a URL link <span className="optional-label">(optional)</span>
           </label>
           <input
@@ -116,7 +116,7 @@ const CreateEventPage = () => {
           <label htmlFor="event-details">
             <span role="img" aria-label="pencil">
               ✏️
-            </span>{" "}
+            </span>
             Description <span className="optional-label">(optional)</span>
           </label>
           <input
